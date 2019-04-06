@@ -12,4 +12,4 @@ Git Bash
 
 UDACITY
 
-![](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
+(https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
