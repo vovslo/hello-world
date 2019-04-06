@@ -16,7 +16,7 @@ UDACITY
 
 classroom_udacity
 
-![](classroom_udacity.jpg)
+![](task_html_css_intro/classroom_udacity.jpg)
 
 htmlacademy
 
