@@ -21,3 +21,7 @@ classroom_udacity
 htmlacademy
 
 ![](task_html_css_intro/htmlacademy.jpg)
+
+htmlacademy_css
+
+![](task_html_css_intro/htmlacademy_css.jpg)
