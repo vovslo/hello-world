@@ -25,3 +25,11 @@ htmlacademy
 htmlacademy_css
 
 ![](task_html_css_intro/htmlacademy_css.jpg)
+
+htmlacademy_table
+
+![](task_html_css_intro/htmlacademy_table.jpg)
+
+htmlacademy_table2
+
+![](task_html_css_intro/htmlacademy_tablemaster.jpg)
