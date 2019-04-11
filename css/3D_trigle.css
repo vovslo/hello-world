@@ -1,0 +1,242 @@
+body {
+    /*background-color:#FF8D00;*/
+    background-color:black;
+}
+a {
+    display: inline-block;
+    width: 48px;
+    height: 38px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: inherit;
+    text-decoration: none;
+    border-radius: 30%;
+    background-color: #9b20ff;
+    color: #fafafa;
+    transition-property: color, background-color;
+    transition-duration: 3s;
+}
+a:hover {
+    color: #9b20ff;
+    background-color: #c9ff20;
+    letter-spacing: 1px;
+}
+/*
+#div {
+    height: 100%;
+    width: 100%;
+    -webkit-clip-path: polygon(50% 90px, 100% 0%, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+background: blue;
+  padding-top: 160px;
+}*/
+.wrap_1 {
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    margin: 15%;
+    text-align:center;
+}
+.wrap_2 {
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    top: 150px; 
+    left: 300px;
+    margin: 15%;
+    text-align:center;
+}
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 130px solid #FF8D00;
+      /*129.903810568*/ 
+    transform-origin: 75px 0;
+      /*perspective: 150px;*/
+    perspective-origin: 100% 100%;   
+}
+.piramide {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid #FF8D00;
+      /*129.903810568*/ 
+    transform-origin: 75px 0;
+      /*perspective: 150px;*/
+    perspective-origin: 100% 100%;   
+}
+.face-1 {
+    opacity: .8;
+    border-bottom-color: green;
+    transform-origin: 75px -10px;
+    transform: rotateY(0deg) rotateX(19.5deg);
+    animation: 5s infinite linear;
+    animation-delay:0s;
+}
+.face-2 {
+    opacity: .8;
+    border-bottom-color: blue;
+    transform-origin: 75px -10px;
+    transform: rotateY(120deg) rotateX(19.5deg);
+    animation: 4s infinite linear;
+    animation-delay:1s;
+}
+.face-3 {
+    opacity: .8;
+    border-bottom-color: red;
+    transform-origin: 75px -10px;
+    transform: rotateY(240deg) rotateX(19.5deg);
+    animation: 3s infinite linear;
+    animation-delay:0s;
+}
+.face-4 {
+    /* bottom face*/ 
+    background-color: ; 
+    transform-origin: 0 0px;
+    transform: rotateX(90deg) translateY(-87px) translateZ(-122px);
+    animation: color1 2s infinite linear;
+    animation-delay:1s;
+}
+      /*piramida*/
+.face-5 {
+    background: ;
+    transform-origin: 75px -5px;
+    transform: rotateX(-30deg);
+    animation: color2 2s infinite linear;
+    animation-delay:5s;
+}
+.face-6 {
+    background: ;
+    transform-origin: 75px -5px;
+    transform: rotateX(30deg) translateZ(0px) translateZ(0px);
+    animation: color2 2s infinite linear;
+    animation-delay:10s;
+}
+.face-7 {
+    opacity: .5;
+    background: ;
+    border-bottom-color:green;
+    transform-origin: 75px -5px;
+    transform: rotateZ(30deg) rotateY(90deg) translateX(0px);
+    animation: color2 2s infinite linear;
+    animation-delay:15s;
+}
+.face-8 {
+    opacity: .5;
+    background: ;
+    border-bottom-color:green;
+    transform-origin: 75px -5px;
+    transform: rotateZ(-30deg) rotateY(90deg) translateZ(0px);
+    animation: color2 2s infinite linear;
+    animation-delay:20s;
+}
+.face-9 {
+     /*bottom face*/ 
+    background-color: grey;
+    border-radius: 30%;
+    border-bottom-color:grey;
+    transform-origin: 0 0px;
+    transform: rotateX(90deg) translateY(-75px) translateZ(-130px);
+    animation: 2s infinite linear;
+    animation-delay: 1s;
+}/*
+.face-9a {
+     /*bottom face* 
+    background-color: red;
+    opacity: .3;
+    transform-origin: 0 0px;
+    transform: rotateX(0deg) translateY(-75px) translateZ(-130px);
+    animation: 2s infinite linear;
+    animation-delay: 1s;
+}*/
+.rotor-x {
+    width:150px;
+    height:130px;
+    background: ;
+    transform-origin:75px 75px;
+    transform-style: preserve-3d;
+    animation: spinX 6s infinite linear;
+}
+.rotor-xp {
+    width:150px;
+    height:150px;
+    background: ;
+    transform-origin:75px 75px;
+    transform-style: preserve-3d;
+    animation: spinXP 6s infinite linear;
+}
+.rotor-y {
+    width:150px;
+    height:130px;
+    background-color: ;
+    transform-origin:75px 75px;
+    transform-style: preserve-3d;
+    animation: spinY 12s infinite linear;
+}
+.rotor-z {
+    width:150px;
+    height:130px;
+    background-color: ;
+    transform-origin:75px 75px;
+    transform-style: preserve-3d;
+    animation: spinZ 18s infinite linear;
+}
+
+@keyframes spinX {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes spinXP {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+@keyframes spinY {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes spinZ {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes color1 {
+    0% {
+        border-bottom-color:#FF8D00;
+   }
+    50% {
+        border-bottom-color: #9B4700;
+ }
+    100% {
+        border-bottom-color:#FF8D00;
+    }
+}
+@keyframes color2 {
+    0% {
+        border-bottom-color:#FF8D00; 
+   }
+    50% {
+        border-bottom-color:#9B4700;
+ }
+    100% { border-bottom-color:#FF8D00;
+    }
+}
