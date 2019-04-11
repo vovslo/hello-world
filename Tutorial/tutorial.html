@@ -1,0 +1,132 @@
+<canvas id="ctx" width="500" height="500" 
+		style="border: 1px solid #000000; 
+		background: lightblue;"></canvas>
+<canvas id="ctx1" width="200" height="500" 
+		style="border: 1px solid #000000; 
+		background: pink;"></canvas>
+<canvas id="ctx1" width="300" height="500" 
+		style="border: 1px solid #000000; 
+		background: lightgreen;"></canvas>
+<script type="text/javascript">
+
+	var ctx = document.getElementById("ctx").getContext("2d")
+	var ctx1 = document.getElementById("ctx1").getContext("2d") 
+	//1. Modify Settings =
+	ctx.font = '30px Arial';
+	ctx.fillStyle = 'blue';
+	ctx.globalAlpha = .8;
+	//2.Modify Settings =
+	ctx1.font = '30px Arial';
+	ctx1.fillStyle = 'red';
+	ctx1.globalAlpha = .8;
+	
+	var HEIGHT = 470;
+	var WIDTH = 470;	
+
+    var HEIGHT1 = 470;
+	var WIDTH1 = 150;
+
+	var message = 'Bouncing';
+
+	var player = {
+		x:50,
+		spdX:20,
+		y:50,
+		spdY:20,
+		name:'G',
+	};
+
+	var player1 = {
+		x:175,
+		spdX:15,
+		y:75,
+		spdY:15,
+		name:'i',
+	};
+
+	var player2 = {
+		x:150,
+		spdX:10,
+		y:100,
+		spdY:10,
+		name:'t',
+	};
+	
+	var enemy = {
+		x:75,
+		spdX:7,
+		y:125,
+		spdY:7,
+		name:'H',
+	};
+    var enemy1 = {
+		x:50,
+		spdX:50,
+		y:150,
+		spdY:5,
+		name:'u',
+	};
+	var enemy2 = {
+		x:150,
+		spdX:30,
+		y:200,
+		spdY:5,
+		name:'b',
+	};
+	var enemy3 = {
+		x:150,
+		spdX:1,
+		y:200,
+		spdY:1,
+		name:'GitHub',
+	};
+
+	setInterval(upd,75);
+	setInterval(updEnemy3,20);	
+
+	function updEntity (caption) {
+		
+		caption.x += caption.spdX;
+		caption.y += caption.spdY;
+	    ctx.fillText(caption.name, caption.x, caption.y);
+
+		if (caption.x < 0 || caption.x > WIDTH) {
+			console.log(message)
+			caption.spdX = -caption.spdX;
+		}
+		if (caption.y < 0 || caption.y > HEIGHT) {
+			console.log(message)
+			caption.spdY = -caption.spdY;
+		}
+	}
+
+	function upd () {
+		ctx.clearRect(0,0,500,500);
+		updEntity(player);
+		updEntity(player1);
+		updEntity(player2);
+		updEntity(enemy);
+		updEntity(enemy1);
+		updEntity(enemy2);
+	}
+
+	function updEnemy3 () {
+		ctx1.clearRect(0,0,200,500);
+		updEntity1(enemy3);
+	}
+	function updEntity1 (caption) {
+		
+		caption.x += caption.spdX;
+		caption.y += caption.spdY;
+	    ctx1.fillText(caption.name, caption.x, caption.y);
+
+		if (caption.x < 0 || caption.x > WIDTH1) {
+			console.log(message)
+			caption.spdX = -caption.spdX;
+		}
+		if (caption.y < 0 || caption.y > HEIGHT1) {
+			console.log(message)
+			caption.spdY = -caption.spdY;
+		}
+	}
+</script>
