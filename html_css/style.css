@@ -1,0 +1,135 @@
+*, body {margin: 0px;	padding: 0px;}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	font-family: calibri;
+	color: grey;
+}
+
+h1 {
+	font-size: 16px;
+	margin-left: 33%;
+	margin-top: 20%;
+	color: white;
+}
+
+div:hover > a {
+	text-decoration: underline;
+}
+
+.main_menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	width: 99%;
+}
+
+.box {
+	margin: 8px;
+}
+
+.menu {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	justify-content: flex-end;
+}
+
+.menu:hover {
+	background-color: #eee;
+}
+
+.menu:active,
+.menu:focus {
+	background-color: #ddd;
+}
+
+.point {
+	padding: 20%;
+	fill: #5f6368;
+	width: 24px;
+	height: 24px;
+}
+
+.element {
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	right: 8px;
+	top: 62px;
+	margin-right: 1%; 
+	border: .5px solid lightgrey;
+	box-shadow: 2px 2px 2px 2px lightgrey;
+	width: 350px;
+	height: 440px;
+	animation: .5s hid ease 1;
+}
+
+.element:hover {
+	overflow: auto;
+	display: block;
+}
+
+.main-item:focus ~ .element, 
+.main-item:active ~ .element, 
+.element:hover  {
+	display: block; 
+}
+
+.oll, .next {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+	position: relative; 
+	margin: 0px;
+	padding: 28px;
+}
+
+li {
+	margin: 1%;
+	list-style-type: none;
+	text-align: center;
+	border-radius: 5%;
+}
+
+li:hover, li:focus {
+	border: .5px solid lightgrey;
+}
+
+li:hover > a,
+.account:hover > a,
+.element:hover {
+	text-decoration: none;
+}
+
+.frame {
+	width: 80px;
+	height: 60px;
+}
+
+.allmenu, #end {
+	background-color: #f3f3f3;
+	color: rgba(0,0,0,0.87);
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	width: 99%;
+}
+
+.account {
+	width: 30px;
+	height: 30px;
+	background-color: lightgreen;
+	border-radius: 50%;
+}
+
+@keyframes hid {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+}
